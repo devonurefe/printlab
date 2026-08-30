@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRINT/LAB — 3D Printwinkel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+<div class="grid-bg"></div>
+<header>
+<div class="logo"><span class="bracket">[</span>PRINT<span style="color:var(--orange)">/</span>LAB<span class="bracket">]</span><span class="jp">3D prints &nbsp;•&nbsp; handgemaakt</span></div>
+<button class="cart-btn" id="cartToggle">
+Winkelwagen <span class="cart-count" id="cartCount">0</span>
+</button>
+</header>
+
+
+<section class="hero">
+<div class="eyebrow">Jouw ideeën • Mijn 3D-printer</div>
+<h1>3D geprinte creaties,<br>met <span>liefde</span> gemaakt.</h1>
+<p>Kies je kleur, laat je naam erop zetten en bestel — ik print het met de hand, in mijn eigen kamer.</p>
+</section>
+
+<section class="products" id="productGrid">
+  
+  <div class="card">
+    <div class="card-img quick-view-trigger" style="cursor: pointer; padding:0; overflow:hidden;" 
+         data-img1="https://placehold.co/400x300/ff5a1f/ffffff?text=Flexi+Draak+1" 
+         data-img2="https://placehold.co/400x300/ff5a1f/ffffff?text=Flexi+Draak+2" 
+         data-img3="https://placehold.co/400x300/ff5a1f/ffffff?text=Flexi+Draak+3">
+      
+      <img src="https://placehold.co/400x300/ff5a1f/ffffff?text=Flexi+Draak+1" alt="Flexi-Draak" style="width:100%; height:100%; object-fit:cover; transition:transform 0.3s;">
+      
+    </div>
+    <div class="card-body">
+      <h3 class="card-title quick-view-trigger" style="cursor: pointer;">Flexi-Draak</h3>
+      <p class="card-desc">Een super coole beweegbare draak, in één stuk geprint. Perfect als speelgoed of fidget op je bureau!</p>
+      <span class="stock">8 op voorraad</span>
+      
+      
+      <div>
+        <span class="field-label">Kleur</span>
+        <select class="color-select" id="color-product-1-draak">
+          
+          <option value="Vuurrood">Vuurrood</option>
+          
+          <option value="Oceaanblauw">Oceaanblauw</option>
+          
+          <option value="Gitzwart">Gitzwart</option>
+          
+          <option value="Smaragdgroen">Smaragdgroen</option>
+          
+        </select>
+      </div>
+      
+      
+      
+      
+      <div class="card-price">€ 14,5</div>
+      <button class="add-btn" 
+              data-id="product-1-draak" 
+              data-title="Flexi-Draak" 
+              data-price="14.5" 
+              data-is-personalizable="false"
+              >
+        In Winkelwagen
+      </button>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-img quick-view-trigger" style="cursor: pointer; padding:0; overflow:hidden;" 
+         data-img1="https://placehold.co/400x300/2f6bff/ffffff?text=Sleutelhanger" 
+         data-img2="" 
+         data-img3="">
+      
+      <img src="https://placehold.co/400x300/2f6bff/ffffff?text=Sleutelhanger" alt="Gepersonaliseerde Sleutelhanger" style="width:100%; height:100%; object-fit:cover; transition:transform 0.3s;">
+      
+    </div>
+    <div class="card-body">
+      <h3 class="card-title quick-view-trigger" style="cursor: pointer;">Gepersonaliseerde Sleutelhanger</h3>
+      <p class="card-desc">Raak je sleutels nooit meer kwijt met deze stevige 3D geprinte sleutelhanger, speciaal met jouw eigen naam erop.</p>
+      <span class="stock">25 op voorraad</span>
+      
+      
+      <div>
+        <span class="field-label">Kleur</span>
+        <select class="color-select" id="color-product-2-sleutelhanger">
+          
+          <option value="Neon Oranje">Neon Oranje</option>
+          
+          <option value="Helderblauw">Helderblauw</option>
+          
+          <option value="Knalgroen">Knalgroen</option>
+          
+          <option value="Zilver">Zilver</option>
+          
+        </select>
+      </div>
+      
+      
+      
+      <div>
+        <span class="field-label">Wat is je naam die je erop wilt?</span>
+        <input type="text" class="name-input" id="name-product-2-sleutelhanger" maxlength="20" placeholder="bijv. Sanne">
+      </div>
+      
+      
+      <div class="card-price">€ 5,95</div>
+      <button class="add-btn" 
+              data-id="product-2-sleutelhanger" 
+              data-title="Gepersonaliseerde Sleutelhanger" 
+              data-price="5.95" 
+              data-is-personalizable="true"
+              >
+        In Winkelwagen
+      </button>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-img quick-view-trigger" style="cursor: pointer; padding:0; overflow:hidden;" 
+         data-img1="https://placehold.co/400x300/12161f/ffffff?text=Koptelefoon+Houder" 
+         data-img2="" 
+         data-img3="">
+      
+      <img src="https://placehold.co/400x300/12161f/ffffff?text=Koptelefoon+Houder" alt="Koptelefoon Houder" style="width:100%; height:100%; object-fit:cover; transition:transform 0.3s;">
+      
+    </div>
+    <div class="card-body">
+      <h3 class="card-title quick-view-trigger" style="cursor: pointer;">Koptelefoon Houder</h3>
+      <p class="card-desc">Een strakke en moderne houder voor je gaming headset of koptelefoon. Houdt je bureau netjes en georganiseerd.</p>
+      <span class="stock">5 op voorraad</span>
+      
+      
+      <div>
+        <span class="field-label">Kleur</span>
+        <select class="color-select" id="color-product-3-koptelefoon">
+          
+          <option value="Zwart">Zwart</option>
+          
+          <option value="Wit">Wit</option>
+          
+          <option value="Spacegrijs">Spacegrijs</option>
+          
+        </select>
+      </div>
+      
+      
+      
+      <div>
+        <span class="field-label">Wat is je naam die je erop wilt?</span>
+        <input type="text" class="name-input" id="name-product-3-koptelefoon" maxlength="20" placeholder="bijv. Sanne">
+      </div>
+      
+      
+      <div class="card-price">€ 18</div>
+      <button class="add-btn" 
+              data-id="product-3-koptelefoon" 
+              data-title="Koptelefoon Houder" 
+              data-price="18" 
+              data-is-personalizable="true"
+              >
+        In Winkelwagen
+      </button>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-img quick-view-trigger" style="cursor: pointer; padding:0; overflow:hidden;" 
+         data-img1="https://placehold.co/400x300/8b93a7/ffffff?text=Plantenpot" 
+         data-img2="" 
+         data-img3="">
+      
+      <img src="https://placehold.co/400x300/8b93a7/ffffff?text=Plantenpot" alt="Schattige Plantenpot" style="width:100%; height:100%; object-fit:cover; transition:transform 0.3s;">
+      
+    </div>
+    <div class="card-body">
+      <h3 class="card-title quick-view-trigger" style="cursor: pointer;">Schattige Plantenpot</h3>
+      <p class="card-desc">Een klein 3D geprint bloempotje met een lachend gezichtje. Ideaal voor kleine vetplantjes of cactussen!</p>
+      <span class="stock">12 op voorraad</span>
+      
+      
+      <div>
+        <span class="field-label">Kleur</span>
+        <select class="color-select" id="color-product-4-plantenpot">
+          
+          <option value="Marmer Wit">Marmer Wit</option>
+          
+          <option value="Terracotta">Terracotta</option>
+          
+          <option value="Pastel Roze">Pastel Roze</option>
+          
+        </select>
+      </div>
+      
+      
+      
+      
+      <div class="card-price">€ 9,5</div>
+      <button class="add-btn" 
+              data-id="product-4-plantenpot" 
+              data-title="Schattige Plantenpot" 
+              data-price="9.5" 
+              data-is-personalizable="false"
+              >
+        In Winkelwagen
+      </button>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-img quick-view-trigger" style="cursor: pointer; padding:0; overflow:hidden;" 
+         data-img1="/assets/uploads/cup.png" 
+         data-img2="" 
+         data-img3="">
+      
+      <img src="/assets/uploads/cup.png" alt="Wereldcup" style="width:100%; height:100%; object-fit:cover; transition:transform 0.3s;">
+      
+    </div>
+    <div class="card-body">
+      <h3 class="card-title quick-view-trigger" style="cursor: pointer;">Wereldcup</h3>
+      <p class="card-desc">Wereldcup</p>
+      <span class="stock">3 op voorraad</span>
+      
+      
+      <div>
+        <span class="field-label">Kleur</span>
+        <select class="color-select" id="color-tuin">
+          
+          <option value="Blauw">Blauw</option>
+          
+          <option value="Rood">Rood</option>
+          
+        </select>
+      </div>
+      
+      
+      
+      <div>
+        <span class="field-label">Wat is je naam die je erop wilt?</span>
+        <input type="text" class="name-input" id="name-tuin" maxlength="20" placeholder="bijv. Sanne">
+      </div>
+      
+      
+      <div class="card-price">€ 22</div>
+      <button class="add-btn" 
+              data-id="tuin" 
+              data-title="Wereldcup" 
+              data-price="22" 
+              data-is-personalizable="true"
+              >
+        In Winkelwagen
+      </button>
+    </div>
+  </div>
+  
+</section>
+
+
+<section class="about-section">
+  <div class="about-content">
+    <img src="https://placehold.co/150x150/12161f/ff5a1f?text=Anime+Avatar" alt="Avatar van de maker" class="about-avatar">
+    <div class="about-text">
+      <h3>Over de Maker</h3>
+      <p>Hoi! Ik ben de maker achter PRINT/LAB. Ik ben 10 jaar oud en helemaal gek op 3D-printen en ontwerpen. Elk item dat je hier ziet, print ik persoonlijk op mijn eigen 3D-printer in mijn kamer. Bedankt voor je support!</p>
+    </div>
+  </div>
+</section>
+
+<!-- Product Quick View Modal -->
+<div class="pm-overlay" id="pmOverlay"></div>
+<div class="pm-modal" id="productModal">
+  <button class="pm-close" id="closeProductModal">&times;</button>
+  
+  <div style="position:relative; width:100%; height:300px; display:flex; align-items:center; justify-content:center;">
+      <button id="pmPrev" style="position:absolute; left:10px; top:50%; transform:translateY(-50%); z-index:2; background:rgba(0,0,0,0.5); color:white; border:none; padding:10px 15px; cursor:pointer; font-size:1.2rem; border-radius:4px; display:none;">&#10094;</button>
+      <img id="pmImage" class="pm-image" src="" alt="Product">
+      <button id="pmNext" style="position:absolute; right:10px; top:50%; transform:translateY(-50%); z-index:2; background:rgba(0,0,0,0.5); color:white; border:none; padding:10px 15px; cursor:pointer; font-size:1.2rem; border-radius:4px; display:none;">&#10095;</button>
+  </div>
+  <div id="pmDots" style="text-align:center; margin-top:-10px; display:flex; justify-content:center; gap:5px;"></div>
+
+  <h2 id="pmTitle" class="pm-title"></h2>
+  <p id="pmDesc" class="pm-desc"></p>
+  <div id="pmPrice" class="pm-price"></div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer">
+<div class="drawer-head">
+<h2>Je winkelwagen</h2>
+<button class="close-btn" id="closeDrawer" aria-label="Sluiten">&times;</button>
+</div>
+<div class="drawer-items" id="drawerItems"></div>
+<div class="drawer-foot" id="drawerFoot">
+<div class="total-row" style="align-items:flex-end;">
+  <span>Totaal</span>
+  <div style="text-align:right;" id="totalAmount">€ 0,00</div>
+</div>
+<button class="checkout-btn" id="checkoutBtn" disabled>Bestellen</button>
+</div>
+<!-- Real Netlify-detectable form (static copy for the build bot) -->
+<form name="bestelling" data-netlify="true" netlify-honeypot="bot-field" hidden>
+<input type="text" name="naam" />
+<input type="email" name="email" />
+<input type="tel" name="telefoon" />
+<input type="radio" name="levering" value="Ophalen" />
+<input type="radio" name="levering" value="Verzenden" />
+<input type="text" name="adres" />
+<input type="radio" name="betaling" value="Tikkie" />
+<input type="radio" name="betaling" value="Contant" />
+<input type="text" name="cart_data" />
+<input type="text" name="bot-field" />
+</form>
+<form class="checkout-form" id="checkoutForm" name="bestelling" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="bestelling" />
+<p class="honeypot"><label>Laat dit leeg: <input name="bot-field" /></label></p>
+<div>
+<span class="field-label">Naam</span>
+<input type="text" name="naam" required>
+</div>
+<div>
+<span class="field-label">E-mail</span>
+<input type="email" name="email" required>
+</div>
+<div>
+<span class="field-label">Telefoonnummer</span>
+<input type="tel" name="telefoon" required>
+</div>
+
+<div>
+<span class="field-label">Leveringsmethode</span>
+<div class="radio-group">
+<label><input type="radio" name="levering" value="Ophalen" required> Ophalen</label>
+<label><input type="radio" name="levering" value="Verzenden" required> Verzenden (PostNL)</label>
+</div>
+</div>
+
+<div id="addressField" style="display:none;">
+<span class="field-label">Bezorgadres</span>
+<textarea name="adres" id="adresInput" rows="3" style="width:100%; background:#0b0e14; border:1px solid var(--line); color:var(--ink); padding:9px 10px; font-family:var(--font-display); font-size:.9rem; border-radius:2px;"></textarea>
+</div>
+
+<p class="privacy-note" style="margin-top:0;">
+  <strong>Verzendkosten:</strong> € 6,50 (Gratis verzending boven de € 50)<br>
+  We gebruiken deze gegevens alleen voor je bestelling.
+</p>
+
+<div>
+<span class="field-label">Betaalmethode</span>
+<div class="radio-group">
+<label><input type="radio" name="betaling" value="Tikkie" required> Tikkie</label>
+<label><input type="radio" name="betaling" value="Contant" required> Contant (bij ophalen)</label>
+</div>
+</div>
+<input type="hidden" name="cart_data" id="cartDataField">
+<button type="submit" class="submit-order">Bestelling versturen</button>
+</form>
+<div class="success-msg" id="successMsg">
+✓ Bedankt voor je bestelling!<br>We nemen snel contact met je op.
+</div>
+</aside>
+<footer>
+<span>© PRINT/LAB</span>
+</footer>
+
+<script src="/js/app.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>

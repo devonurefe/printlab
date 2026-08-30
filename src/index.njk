@@ -1,0 +1,59 @@
+---
+layout: base.njk
+---
+
+<section class="hero">
+<div class="eyebrow">Jouw ideeën • Mijn 3D-printer</div>
+<h1>3D geprinte creaties,<br>met <span>liefde</span> gemaakt.</h1>
+<p>Kies je kleur, laat je naam erop zetten en bestel — ik print het met de hand, in mijn eigen kamer.</p>
+</section>
+
+<section class="products" id="productGrid">
+  {% for product in collections.product %}
+  <div class="card">
+    <div class="card-img quick-view-trigger" style="cursor: pointer; padding:0; overflow:hidden;" 
+         data-img1="{{ product.data.image }}" 
+         data-img2="{{ product.data.image2 }}" 
+         data-img3="{{ product.data.image3 }}">
+      {% if product.data.image %}
+      <img src="{{ product.data.image }}" alt="{{ product.data.title }}" style="width:100%; height:100%; object-fit:cover; transition:transform 0.3s;">
+      {% else %}
+      🖨️
+      {% endif %}
+    </div>
+    <div class="card-body">
+      <h3 class="card-title quick-view-trigger" style="cursor: pointer;">{{ product.data.title }}</h3>
+      <p class="card-desc">{{ product.data.description }}</p>
+      <span class="stock">{% if product.data.stock > 0 %}{{ product.data.stock }} op voorraad{% else %}Uitverkocht{% endif %}</span>
+      
+      {% if product.data.colors and product.data.colors.length %}
+      <div>
+        <span class="field-label">Kleur</span>
+        <select class="color-select" id="color-{{ product.fileSlug }}">
+          {% for color in product.data.colors %}
+          <option value="{{ color }}">{{ color }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      {% endif %}
+      
+      {% if product.data.isPersonalizable %}
+      <div>
+        <span class="field-label">Wat is je naam die je erop wilt?</span>
+        <input type="text" class="name-input" id="name-{{ product.fileSlug }}" maxlength="20" placeholder="bijv. Sanne">
+      </div>
+      {% endif %}
+      
+      <div class="card-price">€ {{ product.data.price | replace(".", ",") }}</div>
+      <button class="add-btn" 
+              data-id="{{ product.fileSlug }}" 
+              data-title="{{ product.data.title }}" 
+              data-price="{{ product.data.price }}" 
+              data-is-personalizable="{{ product.data.isPersonalizable }}"
+              {% if product.data.stock <= 0 %}disabled{% endif %}>
+        In Winkelwagen
+      </button>
+    </div>
+  </div>
+  {% endfor %}
+</section>

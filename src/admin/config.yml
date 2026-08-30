@@ -1,0 +1,69 @@
+backend:
+  name: git-gateway
+  branch: main
+local_backend: true
+
+locale: "tr"
+
+media_folder: "src/assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "product"
+    label: "Ürünler"
+    label_singular: "Ürün"
+    folder: "src/products"
+    create: true
+    slug: "{{slug}}"
+    description: "Buradan dükkanına yeni 3D ürünler ekleyebilir, mevcutları düzenleyebilirsin."
+    fields:
+      - label: "Ürünün Adı"
+        name: "title"
+        widget: "string"
+        hint: "Müşterilerin sitede göreceği büyük başlık. Örnek: 'Mavi Esnek Ejderha'"
+      
+      - label: "Ürün Açıklaması"
+        name: "description"
+        widget: "text"
+        hint: "Bu ürün ne işe yarıyor? Neden çok havalı? Müşterilere kısaca anlat."
+      
+      - label: "Fiyatı (€ Euro)"
+        name: "price"
+        widget: "number"
+        value_type: "float"
+        hint: "Sadece sayıyı gir. Örnek: 14.50 (Ondalık için mutlaka NOKTA kullan)"
+      
+      - label: "Stok (Elinde kaç tane var?)"
+        name: "stock"
+        widget: "number"
+        value_type: "int"
+        hint: "🚨 ÇOK ÖNEMLİ: Birisi satın aldığında bu sayı otomatik eksilmez! Bir ürün sattığında buraya girip sayıyı kendi ellerinle düşürmelisin."
+      
+      - label: "Renk Seçenekleri (İsteğe Bağlı)"
+        name: "colors"
+        widget: "list"
+        required: false
+        hint: "Bu ürünü hangi renklerde basabilirsin? Listeye renk ekle. Örnek: Kırmızı, Neon Yeşil vb."
+      
+      - label: "Üzerine İsim Yazılabiliyor mu?"
+        name: "isPersonalizable"
+        widget: "boolean"
+        default: false
+        hint: "Açık (Yeşil) yaparsan, müşteri bu ürünü alırken sipariş ekranında kendi ismini yazabilir."
+      
+      - label: "Ana Ürün Fotoğrafı (Zorunlu)"
+        name: "image"
+        widget: "image"
+        hint: "Ürünün ana vitrin fotoğrafı. (WEBP, JPG, PNG)"
+      
+      - label: "Ek Fotoğraf 1 (İsteğe Bağlı)"
+        name: "image2"
+        widget: "image"
+        required: false
+        hint: "Varsa ürünün başka bir açıdan fotoğrafını ekle."
+        
+      - label: "Ek Fotoğraf 2 (İsteğe Bağlı)"
+        name: "image3"
+        widget: "image"
+        required: false
+        hint: "Varsa son bir fotoğraf daha ekleyebilirsin."
