@@ -8,5 +8,5 @@ colors:
   - Rood
 isPersonalizable: true
 images: /assets/uploads/hopephoto.jpg
-image: /assets/uploads/images-2.jpeg
+image: /assets/uploads/3d-printed-the-world-cup-trophy-v0-tz9u0620fg6h1.jpg
 ---
