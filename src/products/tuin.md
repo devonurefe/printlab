@@ -8,5 +8,5 @@ colors:
   - Rood
 isPersonalizable: true
 images: /assets/uploads/hopephoto.jpg
-image: /assets/uploads/cup.png
+image: /assets/uploads/images-2.jpeg
 ---
