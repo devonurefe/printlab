@@ -11,12 +11,12 @@ layout: base.njk
 <section class="products" id="productGrid">
   {% for product in collections.product %}
   <div class="card">
-    <div class="card-img quick-view-trigger" style="cursor: pointer; padding:0; overflow:hidden;" 
+    <div class="card-img quick-view-trigger" style="cursor: pointer; padding:0; overflow:hidden; background:#0b0e14;" 
          data-img1="{{ product.data.image }}" 
          data-img2="{{ product.data.image2 }}" 
          data-img3="{{ product.data.image3 }}">
       {% if product.data.image %}
-      <img src="{{ product.data.image }}" alt="{{ product.data.title }}" style="width:100%; height:100%; object-fit:cover; transition:transform 0.3s;">
+      <img src="{{ product.data.image }}" alt="{{ product.data.title }}" style="width:100%; height:100%; object-fit:contain; transition:transform 0.3s;">
       {% else %}
       🖨️
       {% endif %}
