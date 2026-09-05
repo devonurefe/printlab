@@ -181,11 +181,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const drawerFoot = document.getElementById('drawerFoot');
     const successMsg = document.getElementById('successMsg');
     
-    const deliveryRadios = document.querySelectorAll('input[name="levering"]');
+    const deliveryRadios = checkoutForm.querySelectorAll('input[name="levering"]');
     const addressField = document.getElementById('addressField');
     const adresInput = document.getElementById('adresInput');
-    const contantRadio = document.querySelector('input[name="betaling"][value="Contant"]');
-    const tikkieRadio = document.querySelector('input[name="betaling"][value="Tikkie"]');
+    const contantRadio = checkoutForm.querySelector('input[name="betaling"][value="Contant"]');
+    const tikkieRadio = checkoutForm.querySelector('input[name="betaling"][value="Tikkie"]');
     let isShipping = false;
 
     deliveryRadios.forEach(radio => {
