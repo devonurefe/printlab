@@ -1,6 +1,6 @@
 ---
 title: Spiral
-description: spiral
+description: Spiral
 price: 2
 stock: 2
 colors:
