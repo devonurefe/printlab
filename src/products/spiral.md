@@ -8,6 +8,6 @@ colors:
   - Blauw
   - Wit
 isPersonalizable: false
-image: /assets/uploads/oardefault.jpg
-image2: /assets/uploads/oardefault.jpg
+image: /assets/uploads/3d-spiral.webp
+image2: ""
 ---
