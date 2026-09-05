@@ -68,8 +68,8 @@ display:flex; align-items:center; gap:10px;
 }
 .eyebrow::before{content:'[LIVE] '; color:var(--orange); font-size:.75rem;}
 .hero h1{
-font-size:clamp(2.4rem,6vw,4.2rem); line-height:1.05; margin:0 0 18px;
-font-weight:700; max-width:780px;
+font-size:clamp(2rem,6vw,4.2rem); line-height:1.05; margin:0 0 18px;
+font-weight:700; max-width:1200px;
 }
 .hero h1 span{color:var(--orange);}
 .hero p{color:var(--ink-dim); max-width:520px; font-size:1.05rem; line-height:1.6;}
@@ -110,7 +110,7 @@ font-size:3rem; color:var(--line); border-bottom:1px solid var(--line);
 .card-title{font-size:1.15rem; font-weight:700; margin:0;}
 .card-desc{color:var(--ink-dim); font-size:.88rem; line-height:1.5; margin:0;}
 .card-price{font-size:1.4rem; font-weight:700; color:var(--orange); margin-top:auto;}
-.card-price::before{content:'¥ '; opacity:0; }
+.card-price::before{content:'€ '; opacity:0; }
 .field-label{font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-dim); margin-bottom:4px; display:block;}
 select, input[type=text], input[type=email], input[type=tel]{
 width:100%; background:#0b0e14; border:1px solid var(--line); color:var(--ink);
@@ -164,10 +164,10 @@ padding:13px; border-radius:2px; cursor:pointer;
 }
 .checkout-btn:disabled{opacity:.4; cursor:not-allowed;}
 /* Checkout form */
-.checkout-form{display:none; flex-direction:column; gap:14px; padding:0 20px 20px;}
+.checkout-form{display:none; flex-direction:column; gap:14px; padding:0 20px 20px; overflow-y:auto;}
 .checkout-form.open{display:flex;}
 .privacy-note{font-size:.72rem; color:var(--ink-dim); line-height:1.5; margin-top:-6px;}
-.radio-group{display:flex; gap:16px; font-size:.88rem;}
+.radio-group{display:flex; gap:16px; font-size:.88rem; flex-wrap:wrap;}
 .radio-group label{display:flex; align-items:center; gap:6px; cursor:pointer;}
 .submit-order{
 background:var(--orange); color:#0b0e14; border:none; font-weight:700;
@@ -191,10 +191,11 @@ padding: 30px; border-radius: 8px;
 border: 1px solid var(--line);
 }
 .about-avatar {
-width: 120px; height: 120px;
-border-radius: 50%;
-border: 2px solid var(--orange);
-object-fit: cover;
+width: 150px; height: auto;
+border-radius: 8px;
+border: 1px solid var(--line);
+box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+flex-shrink: 0;
 }
 .about-text h3 {
 margin:0 0 10px 0; color:var(--orange); font-size:1.4rem;
@@ -225,7 +226,7 @@ margin:0; font-size:.95rem; color:var(--ink-dim); line-height:1.6;
   font-size: 1.5rem; color: var(--ink-dim); cursor: pointer;
 }
 .pm-close:hover { color: var(--orange); }
-.pm-image { width: 100%; height: 300px; object-fit: cover; border-radius: 4px; }
+.pm-image { width: 100%; height: 300px; object-fit: contain; border-radius: 4px; }
 .pm-title { margin: 0; font-size: 1.6rem; }
 .pm-desc { margin: 0; color: var(--ink-dim); line-height: 1.5; font-size: 0.95rem; }
 .pm-price { font-size: 1.5rem; font-weight: 700; color: var(--orange); }

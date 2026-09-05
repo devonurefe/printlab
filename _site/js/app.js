@@ -184,6 +184,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const deliveryRadios = document.querySelectorAll('input[name="levering"]');
     const addressField = document.getElementById('addressField');
     const adresInput = document.getElementById('adresInput');
+    const contantRadio = document.querySelector('input[name="betaling"][value="Contant"]');
+    const tikkieRadio = document.querySelector('input[name="betaling"][value="Tikkie"]');
     let isShipping = false;
 
     deliveryRadios.forEach(radio => {
@@ -191,6 +193,22 @@ document.addEventListener('DOMContentLoaded', () => {
             isShipping = e.target.value === 'Verzenden';
             addressField.style.display = isShipping ? 'block' : 'none';
             adresInput.required = isShipping;
+            
+            if (isShipping) {
+                // Verzenden (Shipping) -> Disable Cash, force Tikkie
+                tikkieRadio.checked = true;
+                contantRadio.disabled = true;
+                contantRadio.parentElement.style.opacity = '0.4';
+                contantRadio.parentElement.style.textDecoration = 'line-through';
+                contantRadio.parentElement.style.cursor = 'not-allowed';
+            } else {
+                // Ophalen (Pickup) -> Enable Cash
+                contantRadio.disabled = false;
+                contantRadio.parentElement.style.opacity = '1';
+                contantRadio.parentElement.style.textDecoration = 'none';
+                contantRadio.parentElement.style.cursor = 'pointer';
+            }
+            
             renderCart();
         });
     });
