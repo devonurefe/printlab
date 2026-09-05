@@ -191,10 +191,11 @@ padding: 30px; border-radius: 8px;
 border: 1px solid var(--line);
 }
 .about-avatar {
-width: 120px; height: 120px;
-border-radius: 50%;
-border: 2px solid var(--orange);
-object-fit: cover;
+width: 150px; height: auto;
+border-radius: 8px;
+border: 1px solid var(--line);
+box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+flex-shrink: 0;
 }
 .about-text h3 {
 margin:0 0 10px 0; color:var(--orange); font-size:1.4rem;
