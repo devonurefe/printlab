@@ -1,6 +1,6 @@
 ---
 title: Spiral
-description: Spiral
+description: "3d spiral "
 price: 2
 stock: 2
 colors:
