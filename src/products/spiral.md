@@ -7,7 +7,7 @@ colors:
   - Geel
   - Blauw
   - Wit
-isPersonalizable: true
+isPersonalizable: false
 image: /assets/uploads/3d-spiral.webp
 image2: ""
 ---
