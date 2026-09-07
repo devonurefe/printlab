@@ -328,6 +328,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 isShipping = false;
                 checkoutForm.classList.remove('open');
                 
+                // Confetti animatie!
+                if (typeof confetti === 'function') {
+                    confetti({
+                        particleCount: 150,
+                        spread: 80,
+                        origin: { y: 0.6 },
+                        colors: ['#ff5a1f', '#3b82f6', '#ffffff']
+                    });
+                }
+                
                 if (betalingMethod === 'Tikkie') {
                     // Tikkie secildiyse ozel mesaj ve Tikkie linki goster
                     successMsg.innerHTML = `
