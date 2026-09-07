@@ -261,3 +261,10 @@ display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
 @media (prefers-reduced-motion: reduce){
 .drawer, .overlay{transition:none;}
 }
+
+@media (max-width: 600px) {
+  .logo .jp { display: none; }
+  .cart-btn { padding: 8px 12px; font-size: 0.8rem; }
+  .logo { font-size: 1.1rem; }
+  header { padding: 15px 20px; }
+}
