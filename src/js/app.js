@@ -296,8 +296,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Kritieke stap: zet volledige winkelwagen als JSON in het hidden veld
-        document.getElementById('cartDataField').value = JSON.stringify(cart);
+        // Maak een mooie, leesbare lijst voor de e-mail in plaats van JSON
+        const prettyCart = cart.map(item => 
+            `- ${item.qty}x ${item.title} (Kleur: ${item.color || 'Geen'}, Naam: ${item.personalizedName || 'Geen'}) - €${item.price.toFixed(2)}`
+        ).join('\n');
+        
+        document.getElementById('cartDataField').value = prettyCart;
 
         const formData = new FormData(checkoutForm);
         const submitOrderBtn = checkoutForm.querySelector('.submit-order');
