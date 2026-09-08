@@ -339,26 +339,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 
                 if (betalingMethod === 'Tikkie') {
-                    // Tikkie secildiyse ozel mesaj ve Tikkie linki goster
+                    // Tikkie secildiyse ozel mesaj (nog geen automatische Tikkie-link)
                     successMsg.innerHTML = `
                         ✓ Bedankt voor je bestelling!<br><br>
                         Je hebt gekozen voor Tikkie. Het totaalbedrag is <strong>${totalAmountStr}</strong>.<br><br>
-                        <a href="https://tikkie.me/pay/JOUW_TIKKIE_LINK" target="_blank" class="submit-order" style="display:inline-block; text-decoration:none; margin-top:10px;">Nu Betalen via Tikkie</a>
-                        <br><br><span style="font-size:0.8rem; color:var(--ink-dim);">Vul het bedrag zelf in bij Tikkie.</span>
+                        We sturen je zo snel mogelijk een Tikkie-betaalverzoek via WhatsApp of e-mail.
                     `;
-                    successMsg.classList.add('open');
                 } else {
                     // Contant secildiyse normal mesaj
                     successMsg.innerHTML = `✓ Bedankt voor je bestelling!<br>We nemen snel contact met je op.`;
-                    successMsg.classList.add('open');
-                    
-                    setTimeout(() => {
-                        successMsg.classList.remove('open');
-                        drawerFoot.style.display = '';
-                        drawerItems.style.display = '';
-                        closeDrawer();
-                    }, 3500);
                 }
+                successMsg.classList.add('open');
+
+                setTimeout(() => {
+                    successMsg.classList.remove('open');
+                    drawerFoot.style.display = '';
+                    drawerItems.style.display = '';
+                    closeDrawer();
+                }, 4500);
             } else {
                 throw new Error('Netwerk antwoord was niet ok.');
             }
