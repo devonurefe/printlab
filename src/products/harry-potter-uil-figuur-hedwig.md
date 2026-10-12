@@ -4,7 +4,7 @@ description: >-
   Gedetailleerd 3D Geprint Uil Standbeeldje – Tijdloze Vogeldecoratie
 
   Een prachtig gedetailleerd uiltje op een klassieke voet, met zorg 3D-geprint. De verfijnde verendelen en de subtiele glans van het materiaal geven dit beeldje een stijlvolle uitstraling. Ideaal als cadeau voor uilenliefhebbers of als tijdloos decoratiestuk in de boekenkast.
-price: 2
+price: 3
 stock: 5
 colors:
   - Licht blauw
