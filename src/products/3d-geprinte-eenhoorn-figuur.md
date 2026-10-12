@@ -4,7 +4,7 @@ description: >-
   Schattig 3D Geprint Eenhoorn Figuurtje – Minimalistische Witte Decoratie
 
   Breng wat magie in huis met dit lieve, 3D-geprinte eenhoorn figuurtje. Gemaakt van hoogwaardig wit PLA met een subtiele matte afwerking en zichtbare 3D-printlijntjes voor een unieke, handgemaakte uitstraling. Perfect als eyecatcher op een kinderkamer, bureau of wandplank.
-price: 2.5
+price: 3
 stock: 5
 colors:
   - Licht blauw
