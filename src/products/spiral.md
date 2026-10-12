@@ -1,7 +1,7 @@
 ---
 title: Spiral
 description: "3d spiral "
-price: 2
+price: 2.5
 stock: 5
 colors:
   - Licht blauw
