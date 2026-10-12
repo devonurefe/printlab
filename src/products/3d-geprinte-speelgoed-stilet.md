@@ -11,7 +11,7 @@ description: >-
    Kleur: Levendig rood
    Stijl: Ideaal voor cosplay, LARP, of als displaystuk
    Afwerking: Karakteristieke 3D-print textuur met zichtbare details op het handvat en lemmet
-price: 3
+price: 2.5
 stock: 5
 colors:
   - Licht blauw
