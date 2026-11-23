@@ -8,6 +8,10 @@ colors:
   - wit
   - rood
   - groen
+  - blauw
+  - geel
+  - rainbow
+  - donker blauw
 isPersonalizable: false
 image: /assets/uploads/3d-spiral.webp
 image2: /assets/uploads/whatsapp-image-2026-09-07-at-16.27.08-1-.jpeg
