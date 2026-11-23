@@ -15,6 +15,8 @@ colors:
   - zwart
   - zilver
   - geel
+  - blauw
+  - donker blauw
 isPersonalizable: false
 image: /assets/uploads/whatsapp-image-2026-09-07-at-16.27.08.jpeg
 ---
