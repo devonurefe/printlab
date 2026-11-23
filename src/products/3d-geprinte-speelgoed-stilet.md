@@ -22,6 +22,8 @@ colors:
   - rainboow
   - groen
   - geel
+  - blauw
+  - donker blauw
 isPersonalizable: false
 image: /assets/uploads/whatsapp-image-2026-10-12-at-16.22.33.jpeg
 ---
