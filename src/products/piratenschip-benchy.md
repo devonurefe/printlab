@@ -12,6 +12,12 @@ colors:
   - wit
   - rood
   - groen
+  - rainboow
+  - geel
+  - blauw
+  - donker blauw
+  - zwart
+  - zilver
 isPersonalizable: false
 image: /assets/uploads/whatsapp-image-2026-09-07-at-16.27.08-3-.jpeg
 ---
