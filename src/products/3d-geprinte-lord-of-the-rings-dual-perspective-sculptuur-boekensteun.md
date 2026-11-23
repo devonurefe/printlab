@@ -16,6 +16,10 @@ price: 5
 stock: 5
 colors:
   - Licht blauw-wit-rood-zilver
+  - rainboow
+  - zwart
+  - zilver
+  - groen
 isPersonalizable: false
 image: /assets/uploads/whatsapp-image-2026-10-12-at-16.11.50.jpeg
 image2: /assets/uploads/whatsapp-image-2026-10-12-at-16.12.07.jpeg
